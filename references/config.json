@@ -1,0 +1,35 @@
+{
+  "Version": "smartrail_pangu V0.0.0.1",
+  "HttpServer": {"host":"10.10.15.26","port":"8484"},
+
+  "Cameras": [
+    {
+      "baseUrl": "http://172.16.21.220:554",
+      "capturePicUri": "/artemis/api/video/v1/manualCapture",
+      "indexCodes": ["RCX25","RCX28"],
+      "ak": "your_ak_here",
+      "sk": "your_sk_here"
+    },
+    {
+      "baseUrl": "http://172.16.22.220:554",
+      "capturePicUri": "/artemis/api/video/v1/manualCapture",
+      "indexCodes": [],
+      "ak": "your_ak_here",
+      "sk": "your_sk_here"
+    }
+  ],
+
+  "PanGuServer": "http://10.3.229.201:32003",
+
+  "Redis": {
+    "host": "127.0.0.1",
+    "port": "6379",
+    "password":"",
+    "Tags": [
+      {"cameraIndexCode": "RCX25","alarmTag": "pangu.RCX25.alarm","timeTag": "pangu.RCX25.time","picTag": "pangu.RCX25.pic"},
+      {"cameraIndexCode": "RCX28","alarmTag": "pangu.RCX28.alarm","timeTag": "pangu.RCX28.time","picTag": "pangu.RCX28.pic"}
+    ]
+  },
+
+  "ImagesDoc": "D:/pycharm-projects/smartrail_pangu/com/baosight/pangu/start/dist/images"
+}
